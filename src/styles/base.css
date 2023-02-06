@@ -1,3 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.loader_container {
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1em/1.5 sans-serif;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.3s;
+}
+
+.loader__pl,
+.loader_pl__worm {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.loader__pl {
+  animation-name: bump;
+  animation-timing-function: linear;
+  width: 8em;
+  height: 8em;
+}
+.loader_pl__ring {
+  stroke: hsla(var(--hue), 10%, 10%, 0.1);
+  transition: stroke 0.3s;
+}
+.loader_pl__worm {
+  animation-name: worm;
+  animation-timing-function: cubic-bezier(0.42, 0.17, 0.75, 0.83);
+}
+@media (prefers-color-scheme: dark) {
+  .loader_pl__ring {
+    stroke: hsla(var(--hue), 10%, 90%, 0.1);
+  }
+}
+
+/* Animations */
+@keyframes bump {
+  from,
+  42%,
+  46%,
+  51%,
+  55%,
+  59%,
+  63%,
+  67%,
+  71%,
+  74%,
+  78%,
+  81%,
+  85%,
+  88%,
+  92%,
+  to {
+    transform: translate(0, 0);
+  }
+  44% {
+    transform: translate(1.33%, 6.75%);
+  }
+  53% {
+    transform: translate(-16.67%, -0.54%);
+  }
+  61% {
+    transform: translate(3.66%, -2.46%);
+  }
+  69% {
+    transform: translate(-0.59%, 15.27%);
+  }
+  76% {
+    transform: translate(-1.92%, -4.68%);
+  }
+  83% {
+    transform: translate(9.38%, 0.96%);
+  }
+  90% {
+    transform: translate(-4.55%, 1.98%);
+  }
+}
+@keyframes worm {
+  from {
+    stroke-dashoffset: 10;
+  }
+  25% {
+    stroke-dashoffset: 295;
+  }
+  to {
+    stroke-dashoffset: 1165;
+  }
+}
+
+/* body */
+.flower-content {
+  background: linear-gradient(to top right, #000000);
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.flower {
+  display: grid;
+  grid-template-columns: repeat(6, 50px);
+  grid-template-rows: repeat(6, 50px);
+}
+
+.big-petal {
+  animation: 1000ms showPetals linear forwards;
+  background: linear-gradient(
+    to bottom,
+    rgba(178, 10, 44, 0.4),
+    rgba(255, 251, 213, 0.2)
+  );
+  opacity: 0;
+}
+
+.small-petal {
+  animation: 1000ms showPetals linear forwards;
+  background-image: linear-gradient(
+    to left,
+    rgba(247, 112, 98, 0.8) 0%,
+    rgba(254, 81, 150, 0.6) 100%
+  );
+  opacity: 0;
+}
+
+.big-petal1 {
+  border-radius: 100% 0;
+  box-shadow: 0 2.75em 4.5em rgba(0, 0, 0, 0.2);
+  grid-column: 4/-1;
+  grid-row: 1/4;
+}
+
+.big-petal2 {
+  animation-delay: 200ms;
+  box-shadow: 2.75em 0 4.5em rgba(0, 0, 0, 0.2);
+  border-radius: 0 100%;
+  grid-column: 4/-1;
+  grid-row: 4/-1;
+  transform: rotate(180deg);
+}
+
+.big-petal3 {
+  animation-delay: 400ms;
+  border-radius: 100% 0;
+  box-shadow: 0 -2.75em 4.5em rgba(0, 0, 0, 0.2);
+  grid-column: 1/4;
+  grid-row: 4 / -1;
+  transform: rotate(180deg);
+}
+
+.big-petal4 {
+  animation-delay: 600ms;
+  border-radius: 0 100%;
+  box-shadow: -2.75em 0 4.5em rgba(0, 0, 0, 0.2);
+  grid-column: 1/4;
+  grid-row: 1/4;
+}
+
+.small-petal1 {
+  animation-delay: 800ms;
+  border-radius: 100% 0;
+  grid-column: 4/6;
+  grid-row: 2/4;
+}
+
+.small-petal2 {
+  animation-delay: 1000ms;
+  border-radius: 100% 0;
+  grid-column: 4/6;
+  grid-row: 3/5;
+  transform: rotate(45deg) translate(0.8rem, -0.8rem);
+}
+
+.small-petal3 {
+  animation-delay: 1200ms;
+  border-radius: 0 100%;
+  grid-column: 4/6;
+  grid-row: 4/6;
+}
+
+.small-petal4 {
+  animation-delay: 1400ms;
+  border-radius: 100% 0;
+  grid-column: 3/5;
+  grid-row: 3/5;
+  transform: rotate(135deg) translate(3.2rem, -3.2rem);
+}
+
+.small-petal5 {
+  animation-delay: 1600ms;
+  border-radius: 100% 0;
+  grid-column: 2/4;
+  grid-row: 4/6;
+}
+
+.small-petal6 {
+  animation-delay: 1800ms;
+  border-radius: 100% 0;
+  grid-column: 2/4;
+  grid-row: 3/5;
+  transform: rotate(45deg) translate(-0.6rem, 0.6rem);
+}
+
+.small-petal7 {
+  animation-delay: 2000ms;
+  border-radius: 0 100%;
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+.small-petal8 {
+  animation-delay: 2200ms;
+  border-radius: 100% 0;
+  grid-column: 3/5;
+  grid-row: 1/3;
+  transform: rotate(135deg) translate(1.7rem, -1.7rem);
+}
+.mirror {
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+@keyframes showPetals {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
