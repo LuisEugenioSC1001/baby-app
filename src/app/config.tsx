@@ -1,4 +1,5 @@
 import AttendancePage from "./pages/AttendancePage";
+import GiftsDialogPage from "./pages/GiftsDialogPage";
 import GiftsPage from "./pages/GiftsPage";
 import HomePage from "./pages/HomePage";
 import MessagePage from "./pages/MessagePage";
@@ -25,6 +26,12 @@ export default [
   {
     path: "gifts/:id",
     element: <GiftsPage />,
+    children: [
+      {
+        path: "list",
+        element: <GiftsDialogPage />,
+      },
+    ],
   },
   {
     path: "thanks",
