@@ -786,6 +786,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-table@^7.7.14":
+  version "7.7.14"
+  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-7.7.14.tgz#b880f1ae140ed065bca2e21b3008ca1ebe71595a"
+  integrity sha512-TYrv7onCiakaG1uAu/UpQ9FojNEt/4/ht87EgJQaEGFoWV606ZLWUZAcUHzMxgc3v1mywP1cDyz3qB4ho3hWOw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-transition-group@^4.4.5":
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.5.tgz#aae20dcf773c5aa275d5b9f7cdbca638abc5e416"
@@ -930,6 +937,11 @@ camelcase-css@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-2.0.1.tgz#ee978f6947914cc30c6b44741b6ed1df7f043fd5"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
+
+can-use-dom@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
+  integrity sha512-ceOhN1DL7Y4O6M0j9ICgmTYziV89WMd96SvSl0REd8PMgrY0B/WBOPoed5S1KUmJqXgUXh8gzSe6E3ae27upsQ==
 
 caniuse-lite@^1.0.30001426, caniuse-lite@^1.0.30001449:
   version "1.0.30001450"
@@ -1216,6 +1228,11 @@ graphql@^16.6.0:
   version "16.6.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.6.0.tgz#c2dcffa4649db149f6282af726c8c83f1c7c5fdb"
   integrity sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==
+
+hamt_plus@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hamt_plus/-/hamt_plus-1.0.2.tgz#e21c252968c7e33b20f6a1b094cd85787a265601"
+  integrity sha512-t2JXKaehnMb9paaYA7J0BX8QQAY8lwfQ9Gjf4pg/mk4krt+cmwmU652HOoWonf+7+EQV97ARPMhhVgU1ra2GhA==
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -1581,6 +1598,11 @@ react-router@6.8.0:
   dependencies:
     "@remix-run/router" "1.3.1"
 
+react-table@^7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-7.8.0.tgz#07858c01c1718c09f7f1aed7034fcfd7bda907d2"
+  integrity sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==
+
 react-toastify@^9.1.1:
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-9.1.1.tgz#9280caea4a13dc1739c350d90660a630807bf10b"
@@ -1618,6 +1640,13 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+recoil@^0.7.6:
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.7.6.tgz#75297ecd70bbfeeb72e861aa6141a86bb6dfcd5e"
+  integrity sha512-hsBEw7jFdpBCY/tu2GweiyaqHKxVj6EqF2/SfrglbKvJHhpN57SANWvPW+gE90i3Awi+A5gssOd3u+vWlT+g7g==
+  dependencies:
+    hamt_plus "1.0.2"
 
 regenerator-runtime@^0.13.11:
   version "0.13.11"
@@ -1678,6 +1707,21 @@ semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
+
+simplebar-core@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/simplebar-core/-/simplebar-core-1.2.0.tgz#3f109ba472f9c576032564d0fabb6013847f2160"
+  integrity sha512-OgF3poOTi3mzj6HmNvuJfPtvMH/7OsMC+2H3HXQUzddyRDxUifpjHx1/3ozziWWAGTrJejLtu4E8h/kK3eboWQ==
+  dependencies:
+    can-use-dom "^0.1.0"
+    lodash "^4.17.21"
+
+simplebar-react@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/simplebar-react/-/simplebar-react-3.2.0.tgz#0316c0220f85f6f29d7e7c4830fdd98aca294ec0"
+  integrity sha512-rsKUAAARhZ/w5f/uoUf3PWjNVQN7CsFrOPMqJSsXtM2lTyXmiN5femuPLHeY0+95EF2QcQigKQABq9A2a6EvJg==
+  dependencies:
+    simplebar-core "^1.2.0"
 
 source-map-js@^1.0.2:
   version "1.0.2"
