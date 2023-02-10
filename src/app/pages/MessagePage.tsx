@@ -7,7 +7,10 @@ const MessagePage = () => {
     <div className="flex flex-col justify-center gap-2">
       <div className="flex md:flex-row  flex-col justify-center gap-2">
         <div className="md:text-xl flex flex-col justify-center  gap-2">
-          <p>Hola amigos, soy Luciana.</p>
+          <div className="flex flex-row gap-[1ch] ">
+            <p>Hola amigos, soy</p>
+            <p className="font-title text-3xl font-bold">Luciana</p>
+          </div>
           <p className="text-justify">
             Mi papito y mi mamita han querido invitarte a un pequeño picnic en
             homenaje a que pronto llegaré a alegrar más sus días.
