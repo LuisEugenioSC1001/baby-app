@@ -27,6 +27,8 @@ const GiftForm = () => {
         select
       >
         <MenuItem value={"Paquetes"}>Paquete</MenuItem>
+        <MenuItem value={"Tarros"}>Tarro</MenuItem>
+        <MenuItem value={"Cajas"}>Caja</MenuItem>
         <MenuItem value={"Otro"}>Otro</MenuItem>
       </Field>
     </div>

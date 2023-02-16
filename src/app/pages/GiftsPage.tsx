@@ -26,7 +26,6 @@ import useNav from "utils/useNav";
 const GiftsPage = () => {
   const { id } = useParams();
   const [ListState, setGiftsState] = useRecoilState(giftsListState);
-  const [open, setOpen] = useState(false);
   const { data, loading, refetch } = useQuery(giftsList);
   const [gift, setGift] = useState<giftType>({});
   const [quantity, setQuantity] = useState<number>(0);
@@ -60,13 +59,9 @@ const GiftsPage = () => {
           <p className="text-center md:text-lg text-sm py-4">
             Sabemos que en ocasiones es dificil escoger un obsequio, por eso te
             hemos dejado una lista de las cosas que creemos serían un gran
-            regalo.
+            regalo para Luciana.
           </p>
         </div>
-        {/* <p>
-        Si deseas un regalo en efectivo en la esquina inferior derecha tienes un
-        QR para que te sea más fácil hacerlo.
-      </p> */}
         <div className="flex flex-col">
           <div className="flex md:flex-row gap-2 flex-col ">
             <FieldBase
@@ -154,51 +149,7 @@ const GiftsPage = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-center gap-4 pt-10">
-        {/* <Button
-          variant="contained"
-          disabled={isEmpty(ListState)}
-          onClick={() =>
-            updateGuestMutation({
-              variables: {
-                id,
-                data: {
-                  gifts: JSON.stringify(
-                    ListState?.map((o) => ({
-                      ...omit(o, "quantityGift"),
-                      quantity: o?.quantityGift,
-                    }))
-                  ),
-                },
-              },
-              onCompleted: () => {
-                Promise.all(
-                  ListState?.map((o) =>
-                    updateGiftMutation({
-                      variables: {
-                        id: o?.id,
-                        data: {
-                          quantity: (o?.quantity ?? 0) - (o?.quantityGift ?? 0),
-                        },
-                      },
-                      onCompleted: () => {
-                        refetch();
-                        setGiftsState([]);
-                        toast.success("Se ha guardado el listado de regalos");
-                      },
-                    })
-                  )
-                ).then(() => navigate("/thanks"));
-              },
-              onError: () =>
-                toast.error(
-                  "Ups... Algo ha salido mal al tratar de guardar los regalos"
-                ),
-            })
-          }
-        >
-          Guardar regalos
-        </Button> */}
+      <div className="flex flex-row justify-center gap-4 md:pt-10 pt-5">
         <Button
           variant="contained"
           onClick={() => {

@@ -9,14 +9,14 @@ const MessagePage = () => {
         <div className="md:text-xl flex flex-col justify-center  gap-2">
           <div className="flex flex-row gap-[1ch] ">
             <p>Hola amigos, soy</p>
-            <p className="font-title text-3xl font-bold">Luciana</p>
+            <p className="font-title text-3xl font-bold">Luciana.</p>
           </div>
           <p className="text-justify">
-            Mi papito y mi mamita han querido invitarte a un pequeño picnic en
+            Mi papi y mi mami han querido invitarte a un pequeño pícnic en
             homenaje a que pronto llegaré a alegrar más sus días.
           </p>
           <p className="paragraph2 text-justify">
-            A mis papitos y a mi nos gustaría que nos acompañáras en este bello
+            A mis papis y a mí nos gustaría que nos acompañaras en este bello
             momento.
           </p>
         </div>

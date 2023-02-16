@@ -1,36 +1,37 @@
-import { IconButton } from "@mui/material";
+import { DialogContent, DialogContentText, Link, Tooltip } from "@mui/material";
 import DialogPage from "components/DialogPage";
-import { BsCloudDownloadFill } from "react-icons/bs";
+import useIsMobile from "utils/isMobile";
 
 const QRDialog = () => {
+  const isMobile = useIsMobile();
   return (
-    <DialogPage title="Código QR">
-      <div className="flex flex-col gap-2 p-2 items-center ">
-        <div className="flex flex-col w-full items-center gap-4">
-          <img
-            src="/assets/QR1.jpeg"
-            alt="QR code 1"
-            className="w-[50vw] md:w-[15vw] rounded-xl"
-          />
-          <div className="flex flex-col justify-center">
-            <IconButton download href="/assets/QR1.jpeg" color="primary">
-              <BsCloudDownloadFill />
-            </IconButton>
-          </div>
+    <DialogPage title="Códigos QR" maxWidth="lg" fullScreen={isMobile}>
+      <DialogContent>
+        <DialogContentText className="mr-10 text-center">
+          Si deseas descargar un QR puedes darle click a la imagen
+        </DialogContentText>
+        <div className="flex md:flex-row flex-col md:gap-48 gap-5 md:p-16 justify-center items-center pt-2">
+          <Tooltip title="Descargar">
+            <Link download={true} href="/assets/QR Jessica.jpeg">
+              <img
+                src="/assets/QR Jessica.jpeg"
+                alt="QR code 1"
+                className="w-[60vw] md:w-[15vw] rounded-xl"
+              />
+            </Link>
+          </Tooltip>
+
+          <Tooltip title="Descargar">
+            <Link download={true} href="/assets/QR Luis.jpeg">
+              <img
+                src="/assets/QR Luis.jpeg"
+                alt="QR code 2"
+                className="w-[60vw] md:w-[15vw]  rounded-xl"
+              />
+            </Link>
+          </Tooltip>
         </div>
-        {/* <div className="flex flex-row justify-around  w-full">
-          <div className="flex flex-col justify-center">
-            <IconButton download href="/assets/QR2.jpeg">
-              <BsCloudDownloadFill />
-            </IconButton>
-          </div>
-          <img
-            src="/assets/QR2.jpeg"
-            alt="QR code 2"
-            className="w-[50vw] md:w-[15vw]  rounded-xl"
-          />
-        </div> */}
-      </div>
+      </DialogContent>
     </DialogPage>
   );
 };
