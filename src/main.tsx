@@ -14,7 +14,7 @@ const theme = createTheme({
   },
 });
 const client = new ApolloClient({
-  uri: "http://localhost:3000/gql",
+  uri: "https://baby-graph-api.onrender.com/gql",
   cache: new InMemoryCache(),
 });
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
