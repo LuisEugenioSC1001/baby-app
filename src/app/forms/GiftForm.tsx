@@ -3,27 +3,14 @@ import Field from "components/Formik/fields/Field";
 
 const GiftForm = () => {
   return (
-    <div className="grid grid-cols-2 gap-2">
-      <Field
-        name="name"
-        type="string"
-        label="Nombre del regalo"
-        required
-        fullWidth
-      />
-      <Field
-        name="quantity"
-        type="number"
-        label="Cantidad"
-        required
-        fullWidth
-      />
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-2 ">
+      <Field name="name" type="string" label="Nombre del regalo" required />
+      <Field name="quantity" type="number" label="Cantidad" required />
       <Field
         name="unit"
         type="string"
         label="Tipo de unidad"
-        fullWidth
-        className="col-span-2"
+        className="md:col-span-2"
         select
       >
         <MenuItem value={"Paquetes"}>Paquete</MenuItem>
