@@ -1,4 +1,9 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import {
+  ApolloClient,
+  ApolloProvider,
+  HttpLink,
+  InMemoryCache,
+} from "@apollo/client";
 import { createTheme, ThemeProvider } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -14,7 +19,12 @@ const theme = createTheme({
   },
 });
 const client = new ApolloClient({
-  uri: "https://baby-graph-api.onrender.com/gql",
+  link: new HttpLink({
+    uri: "https://baby-graph-api.onrender.com/gql",
+    fetchOptions: {
+      mode: "cors", // no-cors, *cors, same-origin
+    },
+  }),
   cache: new InMemoryCache(),
 });
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
