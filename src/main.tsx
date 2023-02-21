@@ -24,6 +24,9 @@ const client = new ApolloClient({
     fetchOptions: {
       mode: "cors", // no-cors, *cors, same-origin
     },
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   }),
   cache: new InMemoryCache(),
 });
