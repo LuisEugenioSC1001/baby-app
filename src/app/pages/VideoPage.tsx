@@ -1,10 +1,13 @@
 import { Button } from "@mui/material";
+import { useState } from "react";
 import useIsMobile from "utils/isMobile";
 import useNav from "utils/useNav";
 
 const VideoPage = () => {
   const mobile = useIsMobile();
   const navigate = useNav();
+  const [show, setShow] = useState(false);
+
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="md:grid md:grid-cols-3 flex justify-center">
@@ -19,6 +22,9 @@ const VideoPage = () => {
           className="h-[60vh] rounded-xl overflow-hidden md:place-self-center"
           src="/assets/Video.mp4"
           autoPlay={true}
+          onEnded={() => setShow(true)}
+          onPlay={() => setShow(false)}
+          controls
           style={{ WebkitTransform: "translateZ(0)" }}
         />
         {!mobile && (
@@ -29,10 +35,19 @@ const VideoPage = () => {
           />
         )}
       </div>
-
-      <Button variant="contained" onClick={() => navigate("/attendance")}>
-        Confirmar asistencia
-      </Button>
+      <div className="h-[2vh]">
+        <div
+          className={
+            show
+              ? "transition-opacity duration-[2s] opacity-1"
+              : " transition duration-[2s] opacity-0"
+          }
+        >
+          <Button variant="contained" onClick={() => navigate("/attendance")}>
+            Confirmar asistencia
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
