@@ -40,10 +40,14 @@ const VideoPage = () => {
           className={
             show
               ? "transition-opacity duration-[2s] opacity-1"
-              : " transition duration-[2s] opacity-0"
+              : " transition duration-[1s] opacity-0 "
           }
         >
-          <Button variant="contained" onClick={() => navigate("/attendance")}>
+          <Button
+            variant="contained"
+            disabled={!show}
+            onClick={() => navigate("/attendance")}
+          >
             Confirmar asistencia
           </Button>
         </div>
